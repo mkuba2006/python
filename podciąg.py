@@ -99,28 +99,75 @@
 
 
 # zad 4
+# import random
+
+# def generuj_tablice(najwie):
+#     tablica = [random.randint(-najwie, najwie) for i in range(najwie)]
+#     return tablica
+
+# rozmiar_tablicy = 10
+# arr = generuj_tablice(rozmiar_tablicy)
+# print(arr)
+
+
+
+# podciagi = []
+# akt = [arr[0]]
+# for i in range(1, len(arr)):
+#     if arr[i] > arr[i - 1]:
+#         akt.append(arr[i])
+#     else:
+#         podciagi.append(akt)
+#         akt = [arr[i]]
+# podciagi.append(akt)
+
+# posortowane = sorted(podciagi, key=len)
+# najdluzszy_podciag = posortowane[-1]
+# print(najdluzszy_podciag)
+
+
+
+
+
+
+
+
+
+# zad 6
+
 import random
 
 def generuj_tablice(najwie):
-    tablica = [random.randint(-najwie, najwie) for i in range(najwie)]
+    tablica = [random.randint(0, najwie) for i in range(najwie)]
     return tablica
 
-rozmiar_tablicy = 10
+rozmiar_tablicy = 20
 arr = generuj_tablice(rozmiar_tablicy)
-print(arr)
 
 
+podciagi=[]
+akt=[arr[0]]
+suma=0
 
-podciagi = []
-akt = [arr[0]]
-for i in range(1, len(arr)):
-    if arr[i] > arr[i - 1]:
+for i in range(1,len(arr)):
+    if arr[i] > arr[i-1]:
         akt.append(arr[i])
     else:
-        podciagi.append(akt)
-        akt = [arr[i]]
-podciagi.append(akt)
+        for a in akt:
+            suma+=a
+        podciagi.append(suma)
+        akt = [arr[i]]  
+        suma = 0 
+for a in akt:
+    suma+=a
+podciagi.append(suma)
 
-posortowane = sorted(podciagi, key=len)
-najdluzszy_podciag = posortowane[-1]
-print(najdluzszy_podciag)
+
+        
+def ile(podciagi):
+    for c in set(podciagi):
+        print(f"{c} - {podciagi.count(c)} razy")
+        
+print(f"tablica: {arr}")
+print(f"podciągi: {sorted(podciagi)}")      
+ile(sorted(podciagi))
