@@ -127,47 +127,95 @@
 
 
 
+# zad 5
+# import random
+
+# def generuj_tablice(najwie):
+#     tablica = [random.randint(-najwie, najwie) for i in range(najwie)]
+#     return tablica
+
+# rozmiar_tablicy = 20
+# arr = generuj_tablice(rozmiar_tablicy)
 
 
+# podciagi=[]
+# akt=[arr[0]]
+# suma=0
 
-
-
-
-# zad 6
-
-import random
-
-def generuj_tablice(najwie):
-    tablica = [random.randint(0, najwie) for i in range(najwie)]
-    return tablica
-
-rozmiar_tablicy = 20
-arr = generuj_tablice(rozmiar_tablicy)
-
-
-podciagi=[]
-akt=[arr[0]]
-suma=0
-
-for i in range(1,len(arr)):
-    if arr[i] > arr[i-1]:
-        akt.append(arr[i])
-    else:
-        for a in akt:
-            suma+=a
-        podciagi.append(suma)
-        akt = [arr[i]]  
-        suma = 0 
-for a in akt:
-    suma+=a
-podciagi.append(suma)
+# for i in range(1,len(arr)):
+#     if arr[i] < 0:
+#         if arr[i] > arr[i-1]:
+#             akt.append(arr[i])
+#         else:
+#             for a in akt:
+#                 suma+=a
+#             podciagi.append(suma)
+#             akt = [arr[i]]  
+#             suma = 0 
+        
+        
+# for a in akt:
+#     suma+=a
+# podciagi.append(suma)
 
 
         
-def ile(podciagi):
-    for c in set(podciagi):
-        print(f"{c} - {podciagi.count(c)} razy")
+# def ile(podciagi):
+#     for c in set(podciagi):
+#         print(f"{c} - {podciagi.count(c)} razy")
         
-print(f"tablica: {arr}")
-print(f"podciągi: {sorted(podciagi)}")      
-ile(sorted(podciagi))
+# print(f"tablica: {arr}")
+# print(f"podciągi: {podciagi}")      
+# ile(sorted(podciagi))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# zad 6 i 7
+
+# import random
+
+# def generuj_tablice(najwie):
+#     tablica = [random.randint(0, najwie) for i in range(najwie)]
+#     return tablica
+
+# rozmiar_tablicy = 20
+# arr = generuj_tablice(rozmiar_tablicy)
+
+
+# podciagi=[]
+# akt=[arr[0]]
+# suma=0
+
+# for i in range(1,len(arr)):
+#     if arr[i] > arr[i-1]:
+#         akt.append(arr[i])
+#     else:
+#         for a in akt:
+#             suma+=a
+#         podciagi.append(suma)
+#         akt = [arr[i]]  
+#         suma = 0 
+# for a in akt:
+#     suma+=a
+# podciagi.append(suma)
+
+
+        
+# def ile(podciagi):
+#     for c in set(podciagi):
+#         print(f"{c} - {podciagi.count(c)} razy")
+        
+# print(f"tablica: {arr}")
+# print(f"podciągi: {sorted(podciagi)}")      
+# ile(sorted(podciagi))
