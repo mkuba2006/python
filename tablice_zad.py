@@ -29,7 +29,8 @@ def policz_sume_rows():
     
 def stworz_cols():  
     tablica_cols = list(zip(*tablica))
-    print(tablica_cols)
+    for i in tablica_cols:
+        print(i)
     
     
     
