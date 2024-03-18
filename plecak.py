@@ -28,7 +28,7 @@ def sortuj(itemy):
 itemy = [
     {"nr": 3, "waga": 5, "wartosc": 15},
     {"nr": 1, "waga": 2, "wartosc": 3},
-    {"nr": 4, "waga":4, "wartosc": 11},
+    {"nr": 4, "waga": 4, "wartosc": 11},
     {"nr": 2, "waga": 3, "wartosc": 10},
     {"nr": 5, "waga": 2, "wartosc": 4}
 ]
